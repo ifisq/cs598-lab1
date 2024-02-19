@@ -52,12 +52,12 @@ while should_run:
     new_temp = sense.get_temperature()
     new_temp = round(new_temp, 1)
     new_humidity= sense.get_humidity()
-
-    print(f"Old: {temperature} New: {new_temp}")
-    print(f"Old: {humidity} New: {new_humidity}")
-
-    if abs(new_temp - temperature) > 0:
+    
+    if abs(new_temp - temperature) > 1 or abs(new_humidity - humidity) > 1:
         # make it blink
+        
+        print(f"Old: {temperature} New: {new_temp}")
+        print(f"Old: {humidity} New: {new_humidity}")
         
         faceCascade=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
         

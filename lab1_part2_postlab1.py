@@ -31,6 +31,7 @@ while run:
             
             sleep(0.5) ## wait a while and then clear the screen
             sense.clear()
+            
 sense.clear()
             
             
